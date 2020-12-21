@@ -45,6 +45,14 @@ public class ApiValidator {
         return response.jsonPath().get().toString();
     }
 
+
+    /**
+     * Validates API response
+     *
+     * @param dateString
+     * @param base
+     * @param symbol
+     */
     public void validateResponse(String dateString, String base, String symbol) {
         RequestSpecification httpRequest = given();
         response = httpRequest.get("?base=" + base + "&symbols=" + symbol);
@@ -100,6 +108,12 @@ public class ApiValidator {
     }
 
 
+    /**
+     * Performs few date validations
+     *
+     * @param dateString
+     * @param params
+     */
     private void validateDate(String dateString, String params) {
         System.out.println("Validating dates...");
         RequestSpecification httpRequest = given();
