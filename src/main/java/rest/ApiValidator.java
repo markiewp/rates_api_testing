@@ -3,15 +3,12 @@ package rest;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.SpecificationQuerier;
-import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Assert;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
-import java.time.Instant;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static stepdefs.RatesApiStepDefs.API_DEFAULT_URI;

@@ -13,17 +13,17 @@ Feature: API Tests
     Then An automated test suite should run which will assert the response for "<base>" base and "<symbol>" symbol
 
     Examples:
-      | base    | symbol                                      |
-      | EUR     |                                             |
-      | EUR     | PLN                                         |
-      | PLN     | GBP                                         |
-      | PLN     | EUR,GBP                                     |
-      | EUR     | HKD,CHF,CZK,CNY,PLN,CAD,NZD,JPY,RUB,USD,AUD |
-      |         |                                             |
-      |         | EUR                                         |
-      |         | USD                                         |
-      | PLN     |                                             |
-      | PLN,USD |                                             |
+      | base    | symbol                              |
+      | EUR     |                                     |
+      | EUR     | PLN                                 |
+      | PLN     | GBP                                 |
+      | PLN     | EUR,GBP                             |
+      | EUR     | HKD,CHF,PLN,CAD,NZD,JPY,RUB,USD,AUD |
+      |         |                                     |
+      |         | EUR                                 |
+      |         | USD                                 |
+      | PLN     |                                     |
+      | PLN,USD |                                     |
 
 
   Scenario Outline: 3. Call Rates API for Latest Foreign Exchange rates with <url> URL
@@ -60,5 +60,5 @@ Feature: API Tests
     Examples:
       | date       | base | symbol                                      |
       | 2010-01-12 | PLN  | EUR,GBP                                     |
+      | 2020-12-12 | EUR  | HKD,CHF,CZK,CNY,RUB,PLN,CAD,JPY,RUB,USD,AUD |
       | 2022-01-12 | PLN  | EUR,GBP                                     |
-      | 2020-12-12 | EUR  | HKD,CHF,CZK,CNY,PLN,CAD,NZD,JPY,RUB,USD,AUD |

@@ -1,13 +1,10 @@
 package rest;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
 class RatesAPIResponse {
     private String base;
     private String date;
